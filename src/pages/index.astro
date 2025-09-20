@@ -20,12 +20,12 @@ const workCategories = [
 <Layout title="Anthony Shaw | Content Designer">
     <ContextAlert class="mb-8" />
     <!-- <Markdown content={explainer} class="mb-10 text-lg" /> -->
-    <h2 class="justify-center mb-10">Work</h2>
+    <h2 class="justify-center text-center mb-10">Work</h2>
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
             workCategories.map((category) => (
-                <li>
-                    <a href={category.href} class="block p-6 text-lg font-medium text-center text-black bg-white rounded hover:bg-gray-200">
+                <li class="work-category">
+                    <a href={category.href} class="block p-6 text-lg font-medium text-center text-black rounded hover:bg-gray-200">
                         {category.name}
                     </a>
                 </li>

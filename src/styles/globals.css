@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 @import 'tailwindcss';
 
+
 @theme {
-    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Afacad', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --color-primary: #f67280;
     --color-primary-content: #101828;
     --color-complementary: #355c7d;
 }
 
 @layer base {
-    body {
-        background: #fff;
-    }
+
+   
     h1 {
         @apply text-4xl font-bold tracking-tight sm:text-5xl;
     }
@@ -19,9 +20,19 @@
         @apply text-2xl font-bold sm:text-3xl;
     }
 
-    a:not(.btn) {
-        @apply underline transition hover:opacity-80;
+    h3 {
+        @apply text-xl font-semibold sm:text-2xl;
     }
+
+    a:not(.btn) {
+        @apply transition hover:opacity-80;
+    }
+
+    a.under {
+        @apply hover:underline
+    }
+
+    
 
     pre {
         @apply p-6 overflow-x-auto rounded-lg;
@@ -34,21 +45,57 @@
 }
 
 @layer components {
+   
     .markdown {
         > * {
             @apply my-6;
         }
-
         :where(h1, h2) {
             @apply mt-12 mb-6;
         }
-
         > :first-child {
             @apply mt-0;
         }
-
         > :last-child {
             @apply mb-0;
+        }
+    }
+
+    /* Hide content on screens narrower than 750px */
+    .hide-on-mobile {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    li.work-category {
+        border: 1px solid lightgrey;
+        border-radius: 8px;
+    }
+
+    .mobile-center {
+        justify-content: space-between !important;
+    }
+
+    @media (max-width: 750px) {
+        .hide-on-mobile {
+            display: none !important;
+        }
+
+        .mobile-center {
+            align-items: center !important;
+            flex-direction: column;
+        }
+
+        .mobile-nav {
+            padding: 0 0 1em !important;
+            width: 100% !important;
+            border-bottom: 1px solid #ddd;
+            display: flex !important;
+            align-items: center !important;
+            flex-direction: column !important;
         }
     }
 

@@ -1,14 +1,28 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Markdown from '../../../components/Markdown.astro';
+import { Image } from 'astro:assets';
+
+const content = `
+A collection of the various pieces of content design I did for lastminute.com.
+
+### Favourites feature
+
+A feature in the app allowing users to save hotels to a personalised list.
+
+The main challenges for this feature was to make it as easy to use as possible, while also making it clear what the feature was and how it worked. I worked closely with the design team to ensure the copy was clear and concise, while also fitting within the design constraints.
+
+![Mockups of Favourite feature.](/images/fave_example.png "Favourite feature")
+
+### Change Language modal
+
+This modal allows users to change the language of the app. As the original was somewhat wordy, it was important to make this as easy to use as possible, as lastminute.com has a global audience.
+
+![Mockup of Change Language modal.](/images/change_language_modal.png "Change Language modal")
+`;
 ---
 
-<Layout title="lastminute.com UX Writing Case Study">
-    <h1 class="mb-10">lastminute.com Content Design Work</h1>
-    <Markdown
-        content={`
-A collection of the various pieces of content design I did for lastminute.com.
-    `}
-        class="mb-10 text-lg"
-    />
+<Layout title="lastminute.com Content Design">
+    <h2 class="mb-10">lastminute.com Content Design</h2>
+    <Markdown content={content} class="mb-10 text-lg" />
 </Layout>;
