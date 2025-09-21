@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
 
 const workCategories = [
     {
@@ -11,20 +10,19 @@ const workCategories = [
         image: '/images/lastminute_com_app_loading_screen.PNG'
     },
     { name: 'lastminute.com Creative Work', href: '/work/lastminute-com-creative', image: '/images/lastminute_com_homepage_no_borders.png', current: false },
-    { name: 'Spec Work', href: '/work/spec-work', current: false }
+    { name: 'Spec Work', href: '/work/spec-work', current: false, image: '/images/spec_work_logo.png' }
 ];
 ---
 
 <Layout title="Anthony Shaw | Content Designer">
     <ContextAlert class="mb-8" />
-    <!-- <Markdown content={explainer} class="mb-10 text-lg" /> -->
     <h2 class="justify-center text-center mb-10">Work</h2>
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
             workCategories.map((category) => (
                 <li class="work-category">
                     <a href={category.href} class="p-6 text-lg flex flex-col items-center font-medium text-center text-black rounded hover:bg-gray-200">
-                        <img src={category.image} alt={category.name} class="mb-4 rounded" style={{ height: '200px' }} />
+                        <img src={category.image} alt={category.name} class="mb-4 rounded" />
                         {category.name}
                     </a>
                 </li>
