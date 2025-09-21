@@ -13,18 +13,19 @@ const buttons = [
     <Markdown
         content={`
 
-I love words, big and small. 
+Hi! 
 
-I love how they can be used to inform, persuade, entertain, and inspire. I love how they can be combined to create meaning and convey complex ideas.
+I'm Anthony, a content designer based in London. I specialise in creating clear, concise, and user-friendly content for digital products and services. 
 
 ## Get in touch
+
 `}
         class="mb-10 text-lg"
     />
     <div class="flex flex-wrap gap-4 mb-10">
         {
             buttons.map((button) => (
-                <a href={button.href} class="inline-block px-6 py-3 text-lg font-medium text-center text-black bg-white rounded hover:bg-gray-200">
+                <a href={button.href} class="inline-block border px-6 py-3 text-lg font-medium text-center text-black rounded hover:bg-gray-200">
                     {button.text}
                 </a>
             ))
