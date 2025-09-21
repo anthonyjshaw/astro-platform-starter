@@ -83,6 +83,10 @@
         border: 1px solid lightgrey;
     }
 
+    .work-category-img {
+        height: 100px !important;
+    }
+
     @media (max-width: 750px) {
         .hide-on-mobile {
             display: none !important;
