@@ -1,23 +1,34 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Markdown from '../../../components/Markdown.astro';
----
 
-<Layout title="lastminute.com Creative Work Case Study">
-    <h2 class="mb-10">lastminute.com Creative Work</h2>
-    <Markdown
-        content={`
+const content = `
+
 A collection of the various pieces of creative work I did for lastminute.com.
 
 ### Total Packages landing page
 
-A campaign to promote lastminute.com's curated holiday packages.
+A landing page designed to promote lastminute.com's curated holiday packages.
+
+<p class="">
+    <a href="https://www.lastminute.com/holidays/total-packages" class="inline-block border px-6 py-3 text-lg font-medium text-center text-black rounded hover:bg-gray-200">
+        View Live Page
+    </a>    
+</p>
+
 
 ![Mockup of Total Packages campaign landing page.](/images/total_packages_landing_page_with_border.png "A screensh outlining the Total Packages campaign.")
 
-[View the live page here.](https://www.lastminute.com/holidays/total-packages)
+### Loyalty program reminder email A/B test
 
-    `}
-        class="mb-10 text-lg"
-    />
+An email to remind users about the benefits of joining lastminute.com's loyalty program.
+
+![Mockup of Total Packages campaign landing page.](/images/total_packages_landing_page_with_border.png "A screensh outlining the Total Packages campaign.")
+
+`;
+---
+
+<Layout title="lastminute.com Creative Work Case Study">
+    <h2 class="mb-10">lastminute.com Creative Work</h2>
+    <Markdown content={content} class="mb-10 text-lg" />
 </Layout>;
