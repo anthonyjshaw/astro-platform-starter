@@ -11,7 +11,12 @@ Any page or data can be rebuilt only when needed, without site visitors ever get
 `;
 
 const workCategories = [
-    { name: 'lastminute.com Content Design', href: '/work/lastminute-com-content-design', current: true },
+    {
+        name: 'lastminute.com Content Design',
+        href: '/work/lastminute-com-content-design',
+        current: true,
+        image: '/images/lastminute_com_app_loading_screen.PNG'
+    },
     { name: 'lastminute.com Creative Work', href: '/work/lastminute-com-creative', current: false },
     { name: 'Spec Work', href: '/work/spec-work', current: false }
 ];
@@ -25,7 +30,8 @@ const workCategories = [
         {
             workCategories.map((category) => (
                 <li class="work-category">
-                    <a href={category.href} class="block p-6 text-lg font-medium text-center text-black rounded hover:bg-gray-200">
+                    <a href={category.href} class="p-6 text-lg flex flex-col items-center font-medium text-center text-black rounded hover:bg-gray-200">
+                        <img src={category.image} alt={category.name} class="mb-4 rounded" style={{ height: '200px' }} />
                         {category.name}
                     </a>
                 </li>
