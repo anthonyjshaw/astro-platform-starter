@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
 
 const workCategories = [
     {
@@ -12,11 +13,21 @@ const workCategories = [
     { name: 'lastminute.com Creative Work', href: '/work/lastminute-com-creative', image: '/images/lastminute_com_homepage_no_borders.png', current: false },
     { name: 'Spec Work', href: '/work/spec-work', current: false, image: '/images/spec_work_logo.svg' }
 ];
+
+const content = `
+I’m a UX Content Designer specialising in turning complex systems into clear, user-centred digital experiences.
+
+My work focuses on helping users understand what’s happening, what action to take, and why it matters — using inclusive, plain language and thoughtful microcopy.
+
+I collaborate closely with designers, product managers, and engineers to reduce cognitive load, build trust, and support confident decision-making across mobile and web products.
+`;
 ---
 
 <Layout title="Anthony Shaw | Content Designer">
     <ContextAlert class="mb-8" />
     <h2 class="justify-center text-center mb-10">Work</h2>
+    <Markdown content={content} class="mb-10 text-lg" />
+
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
             workCategories.map((category) => (

@@ -3,20 +3,36 @@ import Layout from '../../../layouts/Layout.astro';
 import Markdown from '../../../components/Markdown.astro';
 import { Image } from 'astro:assets';
 
+const title = 'lastminute.com Content Design Projects';
+
 const content = `
-Some examples of content design I did for lastminute.com.
+Some examples of UX content design work delivered for the lastminute.com mobile app. My focus was on improving clarity, reducing cognitive load, and helping users understand functionality quickly within transactional flows.
 
 ### Favourites feature
 
-A feature in the app allowing users to save hotels to a personalised list.
+#### **Context**
+
+The Favourites feature allows users to save hotels to a personalised list for later reference within the app.
 
 ![Mockups of Favourite feature.](/images/fave_example.png "A series of screen mockups outlining the Favourite feature in the lastminute.com app.")
 
-The main challenges for this feature was balancing out how to convey functionality while remaining advertorial. 
+**Challenge**
 
-For the empty screen message, I reworded the designer's proposal of "Hotels you dream of" to "Save your faves!" to make it more casual, while also making it clearer what the feature was about.
+The primary challenge was balancing clear functional communication with a tone that still felt engaging and aligned with lastminute.com'’'s brand. Early design concepts leaned towards more aspirational, advertorial language, which risked obscuring the feature'’'s purpose.
 
+**Content decision**
 
+For the empty state, I reworked the designer's proposed headline “Hotels you dream of” to “Save your faves!”.
+
+This change:
+
+- Made the action clearer and more explicit
+- Used more casual, human language consistent with app tone
+- Reduced ambiguity about what the feature does and how to use it
+
+**Outcome**
+
+The revised copy prioritised clarity while maintaining a friendly tone, helping users immediately understand the value and function of the feature.
 
 ### Change Language bottom sheet
 
@@ -24,12 +40,14 @@ I was asked to reword a bottom sheet menu that gets shown to users when they att
 
 ![Mockup of Change Language modal.](/images/change_language_modal.png "Change Language modal")
 
-In the new version seen on the right, I removed the instructions on how to navigate the user's device settings. This helped reduce cognitive load while still keeping the core intention of the message intact.
+**Outcome**
+
+The simplified content maintained the necessary information while making the interaction easier to scan and understand, particularly for users encountering the message unexpectedly.
 
 `;
 ---
 
-<Layout title="lastminute.com Content Design">
-    <h2 class="mb-10">lastminute.com Content Design</h2>
+<Layout title={`Anthony Shaw | ${title}`}>
+    <h2 class="mb-10">{title}</h2>
     <Markdown content={content} class="mb-10 text-lg" />
 </Layout>;
